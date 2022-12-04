@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Upload Files with Optimization</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/apple-touch-icon.png"
+        sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+        type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+        type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/safari-pinned-tab.svg"
+        color="#7952b3">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-sm-4 sidebar">
+                <div class="card">
+                    <div class="card-body">
+                        <form name="upload-form" id="upload-form">
+                            <div class="text-center">
+                                <img class="mb-4"
+                                    src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt=""
+                                    width="72" height="57">
+                                <h1 class="h3 mb-3 fw-normal">Upload Files</h1>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="profile-file">Select Files</label>
+                                <input multiple class="form-control" type="file" id="profile-file" accept="image/*">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="quality">Select Quality</label>
+                                <select class="form-control" id="quality" name="quality">
+                                    <option value="">Please select</option>
+                                    <optgroup label="Best">
+                                        <option value="1">1</option>
+                                        <option value="0.9">0.9</option>
+                                        <option value="0.8">0.8</option>
+                                    </optgroup>
+                                    <optgroup label="Good (Recommended)">
+                                        <option value="0.7">0.7</option>
+                                        <option value="0.6">0.6</option>
+                                        <option value="0.5">0.5</option>
+                                    </optgroup>
+                                    <optgroup label="Poor">
+                                        <option value="0.4">0.4</option>
+                                        <option value="0.3">0.3</option>
+                                        <option value="0.2">0.2</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <button id="upload-button" class="w-100 btn btn-lg btn-primary">Upload</button>
+                            </div>
+                            <div class="form-group mb-3">
+                                <a id="upload-button" href="files.html" class="w-100 btn btn-lg btn-outline-primary">See
+                                    all files</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 document-tree">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 text-left d-flex justify-content-between">
+                                <span>Current Directory : <strong><span id="current-folder">...</span></strong></span>
+                                <span>Total Size : <strong><span id="total-size">...</span>KB</strong></span>
+                            </div>
+                            <div class="col-6 text-end">
+                                <button id="refresh-button" class="btn btn-outline-primary">Refresh</button>
+                                <button id="delete-button" class="btn btn-outline-primary">Delete Files</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div id="file-table"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="compressor.min.js"></script>
+    <script type="text/javascript" src="js/upload-script.js"></script>
+    <script type="text/javascript" src="js/getfile-script.js"></script>
+</body>
+
+</html>

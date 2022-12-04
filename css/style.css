@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.form-upload {
+}
+
+.sidebar{
+    padding: 50px 30px 50px 30px;
+    background: #FFF;
+}
+.document-tree{
+    padding-top: 50px;
+}

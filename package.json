@@ -1,0 +1,24 @@
+{
+  "name": "javascript-image-optimization",
+  "version": "1.0.0",
+  "description": "javascript image optimization and upload to a light weight node server.",
+  "main": "compressor.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bestuimaker/javascript-image-optimization.git"
+  },
+  "author": "Bhagwati Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bestuimaker/javascript-image-optimization/issues"
+  },
+  "homepage": "https://github.com/bestuimaker/javascript-image-optimization#readme",
+  "dependencies": {
+    "finalhandler": "^1.1.2",
+    "serve-static": "^1.14.2"
+  }
+}
